@@ -19,3 +19,12 @@
     max-width: 100%;
     max-height: 100%;
 }
+
+#conversations div:hover {
+    background: var(--light) !important;
+}
+
+#conversations div.active:not(:hover) {
+    background: var(--primary) !important;
+    color: var(--light) !important;
+}

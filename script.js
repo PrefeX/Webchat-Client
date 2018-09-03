@@ -1,3 +1,6 @@
+// Sockets: https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API/Writing_WebSocket_client_applications
+//var socket = new WebSocket("ws://www.example.com/socketserver", "protocolOne");
+
 // Read the entered value from the message field
 function readInputField() {
     return document.getElementById("chatMessage").value;
@@ -41,26 +44,6 @@ function checkURL(url) {
 }
 
 
-// Send a message to the server, and clear the users input field
-// Example IMG: https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_120x44dp.png
-/* function submitMessage(type) {
-
-    var codePrefix = "<p><b>" + username + ":</b> ";
-    var codeSuffix = "</p>";
-    var string = "";
-
-    // Make sure the input isn't empty before we start
-    if (readInputField() != "") {
-
-        if (type == "img") {
-            string = codePrefix + "<br><img src=\"" + readInputField() + "\" class=\"img-fluid\">" + codeSuffix;
-        } else {
-            string = codePrefix + readInputField() + codeSuffix;
-        }
-
-        $(chatWindow).append(string);
-
-        clearInputField();
-        scrollToBottom();
-    }
-} */
+function newConversation(recievers) {
+    $(conversations).append("<div class=\"p-2 border-bottom\">" + recievers + "</div>");
+}
